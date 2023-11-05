@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage("SCM_Checkout") {
-            steps {
-                git branch: 'main', url: 'https://github.com/ManaasGupta/course3-jenkins-gs-spring-petclinic.git'
-            }
-        }
         stage("Compiling_Project") {
             steps {
                 sh "./mvnw compile"
